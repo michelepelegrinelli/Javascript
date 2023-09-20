@@ -1,5 +1,4 @@
-//primo esercizio in javascript
-
+//exercise 1
 //Write a node.js program to replace two or more a's with the letter b on the given string using Regular Expression.
 
 stringa = "saalve"
