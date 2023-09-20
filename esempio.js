@@ -23,3 +23,22 @@ delete user.last_name
 
 //len of the object
 console.log(Object.keys(user).length);
+
+
+//exercise 3
+//1. Write a JavaScript function that takes a number as a parameter and throws a custom 'Error' if the number is not an integer.
+
+
+function customError(value){
+
+    if(!Number.isInteger(value)){
+        console.log("The value is not an integer");
+    }else{
+        console.log("The value is an Integer")
+    }
+}
+
+//test the function
+customError(3)
+
+
