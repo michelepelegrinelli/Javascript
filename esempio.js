@@ -26,7 +26,7 @@ console.log(Object.keys(user).length);
 
 
 //exercise 3
-//1. Write a JavaScript function that takes a number as a parameter and throws a custom 'Error' if the number is not an integer.
+//Write a JavaScript function that takes a number as a parameter and throws a custom 'Error' if the number is not an integer.
 
 
 function customError(value){
@@ -42,3 +42,83 @@ function customError(value){
 customError(3)
 
 
+//exercise 4
+//Write a JavaScript function that uses a try-catch block to catch and handle a 'TypeError' when accessing a property of an undefined object.
+
+function HandleError(){
+
+    try {
+        const undefinedObject = undefined;
+        console.log(undefinedObject.property); // Accessing property of undefined object
+      } catch (error) {
+        if (error instanceof TypeError) 
+        {
+          console.log('Error: Property access to undefined object');
+        } 
+        else 
+        {
+          throw error; // Rethrow the error if it's not a TypeError
+        }
+      }
+}
+
+//function call
+HandleError()
+
+//exercise 5 
+//Write a JavaScript function that accepts two numbers as parameters and throws a custom 'Error' if the second number is zero.
+
+function checkNumbers(a, b){
+     
+    if(b==0){
+       console.error("the second value is zero, try again")
+    }else{
+        console.log("the second number is ok")
+    }
+}
+
+//function call
+checkNumbers(2,1)
+
+//exercise 6
+//Write a JavaScript function that takes a number as a parameter and throws a custom 'Error' if the number is negative.
+
+function checkIfNegative(num){
+    if(num<0){
+        console.error("the value is negative")
+    }else{
+        console.log("the value is ok")
+    }
+}
+
+//function call
+checkIfNegative(-2)
+
+//exercise 7
+//Write a JavaScript function that takes an array as a parameter and throws a custom 'Error' if the array is empty.
+
+function checkIfEmpty(arr){
+    if(arr.length==0){
+        console.error("the array is empty, try again")
+    }else{
+        console.log("the array is good")
+    }
+}
+
+//function call
+checkIfEmpty([4])
+
+//exercise 8
+//Write a JavaScript program to calculate the factorial of a number.  In mathematics, the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n. For example, 5! = 5 x 4 x 3 x 2 x 1 = 120
+
+function ricursive(num){
+   if(num==1){
+    return 1
+   }
+    return num*ricursive(num-1)
+}
+
+console.log(ricursive(5))
+
+
+//next
